@@ -14,8 +14,14 @@ A robust UI test automation framework for Amazon.com, built with **Python**, **S
 - Easy to extend and integrate with CI tools
 
 ---
+## 🚀 Setup (Locally)
 
-## 🗂️ Project Structure
+### 1. Clone the repository
+
+''  git clone https://github.com/MarwanSultan/amazon_testing.git
+    cd amazon_testing
+''
+
 
 ## Create a virtual environment and install dependencies
 python -m venv venv
