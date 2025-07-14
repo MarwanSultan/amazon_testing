@@ -1,6 +1,7 @@
 import re
 from pages.homepage import HomePage
 
+
 def test_amazon_homepage_title(page):
     homepage = HomePage(page)
     homepage.load()
