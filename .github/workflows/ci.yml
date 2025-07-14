@@ -20,5 +20,13 @@ jobs:
       - name: Build Docker image
         run: docker build -t amazon-tests .
 
-      - name: Run tests in Docker container
-        run: docker run --rm amazon-tests
+      - name: Run tests in Docker and extract Allure results
+        run: |
+          docker run --name amazon-tests-container amazon-tests
+          docker cp amazon-tests-container:/app/allure-results ./allure-results || echo "No allure results found"
+          docker rm amazon-tests-container
+
+      - name: Install Allure CLI
+        run: |
+          wget https://github.com/allure-framework/allure2/releases/download/2.21.1/allure-2.21.1.zip
+          unzip -o allure-2.21.1.
